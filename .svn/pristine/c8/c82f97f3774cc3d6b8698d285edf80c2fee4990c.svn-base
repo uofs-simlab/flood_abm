@@ -1,0 +1,135 @@
+"""
+Created on Wed Oct  2 21:04:00 2024
+@author: addaio
+
+"""
+
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import matplotlib.pylab as plb
+import seaborn as sns
+
+def plot_graphs(file_path, file_type, group_num, columns_to_include,  x_label, y_label, legend_labels=None, legend_fontsize=None, line_thickness=1.5, 
+                x_range=None, y_range=None, x_interval=None, y_interval=None, axis_label_size=12, tick_label_size=None, colors=None, plot_average=False, 
+                include_std=False, plot_title=None, show_title=False):
+
+    # Load data from the specified file
+    if file_type == 'csv':
+        df = pd.read_csv(file_path)
+    elif file_type == 'pkl':
+        df = pd.read_pickle(file_path)
+    else:
+        raise ValueError("Unsupported file type. Use 'csv' or 'pkl'.")
+
+    # Select the columns associated with the specified group number
+    if group_num < 0 or group_num >= len(columns_to_include):
+        raise ValueError("Invalid group number. Please choose a valid group number.")
+    
+    selected_columns = columns_to_include[group_num]
+
+    # Set plot style
+    sns.set(style="white")
+    plt.figure(figsize=(10, 6))
+
+    # Melt the DataFrame for easier plotting with seaborn
+    melted_df = df[selected_columns].melt(id_vars=[selected_columns[0]], var_name="Variable", value_name="Value")
+    
+    # Plotting the average and std (fill between)
+    if plot_average:
+        ax = sns.lineplot(
+            data=melted_df, 
+            x=selected_columns[0], 
+            y="Value", 
+            hue="Variable", 
+            ci="sd" if include_std else None,  # Confidence interval (can use 'sd' for standard deviation) 
+            linewidth=line_thickness,
+            palette=colors[:len(selected_columns[1:])]  # Limit colors to number of lines being plotted
+        )    
+        sns.move_legend(ax, 'best', labels=legend_labels, title=None, frameon=True)
+        plb.setp(ax.get_legend().get_texts(), fontsize=legend_fontsize) # for legend text
+        
+    # Set axis labels
+    plt.xlabel(x_label, fontsize=axis_label_size)
+    plt.ylabel(y_label, fontsize=axis_label_size)
+    
+    # Set title if enabled
+    if show_title and plot_title:
+        plt.title(plot_title, fontsize=axis_label_size + 2)  # Title font size can be slightly larger than axis label size
+
+    # Set axis ranges if specified
+    if x_range:
+        plt.xlim(x_range)
+    if y_range:
+        plt.ylim(y_range)
+
+    # Set axis intervals if specified
+    if x_interval:
+        plt.xticks(range(int(x_range[0]), int(x_range[1]) + 1, x_interval), fontsize=tick_label_size)
+    if y_interval:
+        plt.yticks(np.arange(y_range[0], y_range[1] + y_interval, y_interval), fontsize=tick_label_size)
+
+    plt.grid(False)
+    plt.tight_layout()
+    plt.show()
+
+file_path = "batch_run_results.csv"  # or 'batch_run_results.pkl'
+file_type = 'csv'                    # or 'pkl'
+
+columns_to_include = [
+    ["Step", "Evacuated", "Preflood_Non_Evacuation_Measure_Implemented", "Duringflood_Coping_Action_Implemented", "Postflood_Adaptation_Measures_Planned"],
+    ["Step", "Stranded", "Injured", "Sheltered", "Hospitalized", "Death"],
+    ["Step", "evacuated_SES_1_0_0.5", "evacuated_SES_1_0.8_1"],
+    ["Step", "evacuated_SES_2_0_0.5", "evacuated_SES_2_0.8_1"],
+    ["Step", "stranded_SES_1_0_0.5", "stranded_SES_1_0.8_1"],
+    ["Step", "stranded_SES_2_0_0.5", "stranded_SES_2_0.8_1"],
+    ["Step", "injured_SES_1_0_0.5", "injured_SES_1_0.8_1"],
+    ["Step", "injured_SES_2_0_0.5", "injured_SES_2_0.8_1"],
+    ["Step", "hospitalized_SES_1_0_0.5", "hospitalized_SES_1_0.8_1"],
+    ["Step", "hospitalized_SES_2_0_0.5", "hospitalized_SES_2_0.8_1"],
+    ["Step", "sheltered_SES_1_0_0.5", "sheltered_SES_1_0.8_1"],
+    ["Step", "sheltered_SES_2_0_0.5", "sheltered_SES_2_0.8_1"],
+    ["Step", "dead_SES_1_0_0.5", "dead_SES_1_0.8_1"],
+    ["Step", "dead_SES_2_0_0.5", "dead_SES_2_0.8_1"],
+    ["Step", "Houses_Flooded", "Businesses_Flooded", "Schools_Flooded"],
+    ["Step", "Wealth_People", "Wealth_Businesses", "Wealth_Shelter", "Wealth_Healthcare", "Wealth_Government"],
+    ["Step", "PMT_preflood_non_evacuation_measure_implemented_SES_1_0_0.5",	"TPB_preflood_non_evacuation_measure_implemented_SES_1_0_0.5", "SCT_preflood_non_evacuation_measure_implemented_SES_1_0_0.5",	"CRT_preflood_non_evacuation_measure_implemented_SES_1_0_0.5"],
+    ["Step", "PMT_preflood_non_evacuation_measure_implemented_SES_1_0.8_1", "TPB_preflood_non_evacuation_measure_implemented_SES_1_0.8_1", "SCT_preflood_non_evacuation_measure_implemented_SES_1_0.8_1",	"CRT_preflood_non_evacuation_measure_implemented_SES_1_0.8_1"],
+    ["Step", "PMT_preflood_non_evacuation_measure_implemented_SES_2_0_0.5",	"TPB_preflood_non_evacuation_measure_implemented_SES_2_0_0.5", "SCT_preflood_non_evacuation_measure_implemented_SES_2_0_0.5",	"CRT_preflood_non_evacuation_measure_implemented_SES_2_0_0.5"],
+    ["Step", "PMT_preflood_non_evacuation_measure_implemented_SES_2_0.8_1", "TPB_preflood_non_evacuation_measure_implemented_SES_2_0.8_1", "SCT_preflood_non_evacuation_measure_implemented_SES_2_0.8_1",	"CRT_preflood_non_evacuation_measure_implemented_SES_2_0.8_1"],
+    ["Step", "PMT_e vacuation_SES_1_0_0.5", "TPB_evacuation_SES_1_0_0.5", "SCT_evacuation_SES_1_0_0.5",	"CRT_evacuation_SES_1_0_0.5"],
+    ["Step", "PMT_evacuation_SES_1_0.8_1", "TPB_evacuation_SES_1_0.8_1", "SCT_evacuation_SES_1_0.8_1",	"CRT_evacuation_SES_1_0.8_1"],
+    ["Step", "PMT_evacuation_SES_2_0_0.5", "TPB_evacuation_SES_2_0_0.5", "SCT_evacuation_SES_2_0_0.5",	"CRT_evacuation_SES_2_0_0.5"],
+    ["Step", "PMT_evacuation_SES_2_0.8_1", "TPB_evacuation_SES_2_0.8_1", "SCT_evacuation_SES_2_0.8_1",	"CRT_evacuation_SES_2_0.8_1"],
+    ["Step", "PMT_duringflood_coping_action_implemented_SES_1_0_0.5", "TPB_duringflood_coping_action_implemented_SES_1_0_0.5", "SCT_duringflood_coping_action_implemented_SES_1_0_0.5",	"CRT_duringflood_coping_action_implemented_SES_1_0_0.5"],
+    ["Step", "PMT_duringflood_coping_action_implemented_SES_1_0.8_1", "TPB_duringflood_coping_action_implemented_SES_1_0.8_1", "SCT_duringflood_coping_action_implemented_SES_1_0.8_1",	"CRT_duringflood_coping_action_implemented_SES_1_0.8_1"],
+    ["Step", "PMT_duringflood_coping_action_implemented_SES_2_0_0.5", "TPB_duringflood_coping_action_implemented_SES_2_0_0.5", "SCT_duringflood_coping_action_implemented_SES_2_0_0.5",	"CRT_duringflood_coping_action_implemented_SES_2_0_0.5"],
+    ["Step", "PMT_duringflood_coping_action_implemented_SES_2_0.8_1", "TPB_duringflood_coping_action_implemented_SES_2_0.8_1", "SCT_duringflood_coping_action_implemented_SES_2_0.8_1",	"CRT_duringflood_coping_action_implemented_SES_2_0.8_1"],
+    ["Step", "PMT_postflood_adaptation_measures_planned_SES_1_0_0.5", "TPB_postflood_adaptation_measures_planned_SES_1_0_0.5", "SCT_postflood_adaptation_measures_planned_SES_1_0_0.5",	"CRT_postflood_adaptation_measures_planned_SES_1_0_0.5"],
+    ["Step", "PMT_postflood_adaptation_measures_planned_SES_1_0.8_1", "TPB_postflood_adaptation_measures_planned_SES_1_0.8_1", "SCT_postflood_adaptation_measures_planned_SES_1_0.8_1",	"CRT_postflood_adaptation_measures_planned_SES_1_0.8_1"],
+    ["Step", "PMT_postflood_adaptation_measures_planned_SES_2_0_0.5", "TPB_postflood_adaptation_measures_planned_SES_2_0_0.5", "SCT_postflood_adaptation_measures_planned_SES_2_0_0.5",	"CRT_postflood_adaptation_measures_planned_SES_2_0_0.5"],
+    ["Step", "PMT_postflood_adaptation_measures_planned_SES_2_0.8_1", "TPB_postflood_adaptation_measures_planned_SES_2_0.8_1", "SCT_postflood_adaptation_measures_planned_SES_2_0.8_1",	"CRT_postflood_adaptation_measures_planned_SES_2_0.8_1"]
+]
+
+group_num = 29                       # Select the group number from columns_to_include
+x_label = "Days"
+y_label = "Proportion of theories in high vulnerability group"
+legend_labels = ["PMT",	"TPB", "SCT", "CRT"]
+legend_fontsize = '22'
+line_thickness = 4
+x_range = (24, 38.2)
+y_range = (0, 0.2)
+x_interval = 7
+y_interval = 0.05
+axis_label_size = 17
+tick_label_size = 18  # Set the tick label size here
+colors = sns.color_palette("deep")  # Seaborn’s default color palette
+plt_std = False
+plot_title = "Post-flood adaptation measures planned"
+show_title = True
+
+# To plot the average with standard deviation fill
+plot_graphs(file_path, file_type, group_num, columns_to_include, x_label, y_label, legend_labels, legend_fontsize, 
+            line_thickness, x_range, y_range, x_interval, y_interval, axis_label_size, tick_label_size, colors, 
+            plot_average=True, include_std=plt_std, plot_title=plot_title, show_title=show_title)
+

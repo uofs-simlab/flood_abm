@@ -1,0 +1,9 @@
+mesa==2.1.2
+mesa-geo==0.7.1
+numpy
+shapely
+scipy
+matplotlib
+seaborn
+pandas
+psutil

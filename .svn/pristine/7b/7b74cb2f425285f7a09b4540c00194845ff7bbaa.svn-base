@@ -1,0 +1,102 @@
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+def plot_graphs(file_path, file_type, metric, x_label, y_label, legend_labels=None, legend_fontsize=None, line_thickness=1.5, 
+                x_range=None, y_range=None, x_interval=None, y_interval=None, axis_label_size=12, tick_label_size=None, colors=None, 
+                plot_average=False, include_std=False, plot_title=None, show_title=False, show_legend=True):
+
+    # Load data from the specified file
+    if file_type == 'csv':
+        df = pd.read_csv(file_path)
+    elif file_type == 'pkl':
+        df = pd.read_pickle(file_path)
+    else:
+        raise ValueError("Unsupported file type. Use 'csv' or 'pkl'.")
+
+    # Ensure the required columns are present in the dataframe
+    selected_columns = ['shelter_cap_limit', metric]
+    if not all(col in df.columns for col in selected_columns):
+        raise ValueError(f"Required columns {selected_columns} not found in the dataset.")
+
+    # Set plot style
+    sns.set(style="white")
+    plt.figure(figsize=(10, 6))
+
+    # If plot_average is True, group by 'shelter_cap_limit' and calculate the mean and std
+    if plot_average:
+        # Group data by 'shelter_cap_limit' and calculate mean and std
+        grouped_data = df.groupby('shelter_cap_limit')[metric].agg(['mean', 'std']).reset_index()
+
+        # Plot the mean
+        ax = sns.lineplot(
+            x=grouped_data['shelter_cap_limit'], 
+            y=grouped_data['mean'], 
+            linewidth=line_thickness, 
+            palette=colors[:1]
+        )
+
+        # Optionally include standard deviation as shading
+        if include_std:
+            plt.fill_between(grouped_data['shelter_cap_limit'], 
+                             grouped_data['mean'] - grouped_data['std'], 
+                             grouped_data['mean'] + grouped_data['std'], 
+                             color=colors[0], alpha=0.3)
+
+    # Set legend if provided and show_legend is True
+    if legend_labels and show_legend:
+        ax.legend(labels=legend_labels, fontsize=legend_fontsize)
+
+    # Set axis labels
+    plt.xlabel(x_label, fontsize=axis_label_size)
+    plt.ylabel(y_label, fontsize=axis_label_size)
+
+    # Set title if enabled
+    if show_title and plot_title:
+        plt.title(plot_title, fontsize=axis_label_size + 2)
+
+    # Set axis ranges if specified
+    if x_range:
+        plt.xlim(x_range)
+    if y_range:
+        plt.ylim(y_range)
+
+    # Set x-axis intervals if specified
+    if x_interval:
+        plt.xticks(np.arange(x_range[0], x_range[1] + x_interval, x_interval), fontsize=tick_label_size)
+
+    # Set y-axis intervals using np.arange similar to x-axis
+    if y_interval:
+        plt.yticks(np.arange(y_range[0], y_range[1] + y_interval, y_interval), fontsize=tick_label_size)
+
+    plt.grid(False)
+    plt.tight_layout()
+    plt.show()
+
+# Example usage
+file_path = "batch_run_results.csv"  # Replace with your file
+file_type = 'csv'                    # or 'pkl'
+
+# Define plot parameters
+metric = "sheltered_total_pop_SES_1_0.7_1" # Specify the metric you want to plot
+x_label = "Shelter Capacity Limit"
+y_label = "Stranded Persons Proportions"
+legend_labels = ["Stranded SES 1"]
+legend_fontsize = 22
+line_thickness = 4
+x_range = (0, 5)  # Adjust based on your data
+y_range = (0, 0.025)  # Adjust based on your data
+x_interval = 0.5
+y_interval = 0.025
+axis_label_size = 22
+tick_label_size = 22
+colors = sns.color_palette("deep")
+plot_title = "High Vulnerability Persons vs. Shelter Capacity"
+show_title = True
+show_legend = False  # Change to True to show legend
+
+# Call the function
+plot_graphs(file_path, file_type, metric, x_label, y_label, legend_labels, legend_fontsize, line_thickness, 
+            x_range, y_range, x_interval, y_interval, axis_label_size, tick_label_size, colors, 
+            plot_average=True, include_std=False, plot_title=plot_title, show_title=show_title, show_legend=show_legend)
