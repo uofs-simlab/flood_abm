@@ -109,3 +109,10 @@ Contributions are welcome! Please submit a pull request or open an issue for fee
 This project is licensed under the **MIT License**. See the `license` file for details.
 
 ---
+
+## Flood ABM - Visualization
+
+![img1](./images/viz1.PNG)
+![img2](./images/viz2.PNG)
+
+---
