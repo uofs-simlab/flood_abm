@@ -12,7 +12,7 @@ def step(self):
     decide_on_action(self)
         
 ############################################################ DECISION-MAKING (NATURAL DISASTER) ####################################################
-# Support methods - Updates for every step
+# Support Methods - Updates for every step
 
 def adjust_for_location(self):
     # Adjust threat level and coping potential based on location

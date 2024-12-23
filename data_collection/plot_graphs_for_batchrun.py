@@ -6,7 +6,7 @@ It allows users to analyze trends in agent behaviors, decisions, and states
 over simulation time steps. The script supports customization of plot appearance, 
 including axis labels, legends, and color schemes.
 
-images are saved in graphs directory
+Images are saved in graphs directory
 """
 import os
 import pandas as pd

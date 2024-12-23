@@ -28,7 +28,7 @@ import uuid
 
 class Person_Agent(GeoAgent):
     """
-    Person Agent represents individuals within the simulation. Each person possesses demographic attributes such as age, ethnicity,
+    Person Agents represent individuals within the simulation. Each person possesses demographic attributes such as age, ethnicity,
     and income, alongside a measure of flood risk perception and preparedness. They engage in diverse behaviors including daily 
     activities, responses to flood-induced distress, tax payment, and interaction with businesses for services.
     """

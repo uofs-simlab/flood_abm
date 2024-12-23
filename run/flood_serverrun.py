@@ -6,7 +6,7 @@ allowing real-time observation of agent behaviors, decisions, and flood impacts
 through a web interface.
 
 Output:
-- Interactive visualization accessible via a web browser and data saved in 
+Interactive visualization accessible via a web browser and data saved in 
   data_collection/serverrun_results.csv
 """
 

@@ -1,7 +1,7 @@
 """
 Flood Model Simulation
 
-This model simulates a flood scenario where agents (persons, houses, businesses, shelter systems, and government) 
+This model simulates a flood scenario where agents (persons, homes, businesses, shelter system, healthcare, and government) 
 interact within a grid-based environment. Each agent has specific attributes and behaviors, such as risk perception, 
 movement, distress reactions, and financial transactions. The simulation tracks the effects of flooding on agent behavior, 
 economic activities, rescue operations, and shelter systems.

@@ -6,7 +6,7 @@ to analyze the effects of different scenarios. It collects results and saves
 them to a CSV  file for further analysis.
 
 Output:
-- Data saved in 'data_collection/batchrun_results.csv'.
+Data saved in 'data_collection/batchrun_results.csv'.
 """
 
 import sys

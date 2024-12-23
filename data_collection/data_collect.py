@@ -6,7 +6,7 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 from mesa import DataCollector
 import agents.flood_agents as FA
 
-#-------------- Data Collection based on SES index --------------------
+#-------------- Data Collection based on SES index -------------------
 
 def data_collection(model):
     model.datacollector = DataCollector(

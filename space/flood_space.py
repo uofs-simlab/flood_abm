@@ -1,9 +1,15 @@
-# -*- coding: utf-8 -*-
 """
-Created on Wed May 15 18:04:08 2024
+The StudyArea class represents a geographical space for simulating flood events and their impacts. 
+It extends Mesa-Geo's GeoSpace to integrate geospatial data with agent-based modeling.
 
-@author: oaadd
+Key features:
+- Loads spatial data and converts it into agents (e.g., houses, businesses, schools, etc.).
+- Manages flood areas and calculates flood impacts.
+- Supports agent movement and spatial queries.
+
+This class is designed for flexible and reusable flood simulation models with geospatial interactions.
 """
+
 import uuid
 import agents.flood_agents as FA
 import random

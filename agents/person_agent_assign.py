@@ -8,7 +8,7 @@ import numpy as np
 
 def create_person_agents(model):
     """
-    Create person agents in the model with demographics, wealth classes, and attributes.
+    Create person agents in the model with demographics, wealth classes, and other attributes.
     
     Steps:
     1. Define proportions of different wealth classes and ethnicities.

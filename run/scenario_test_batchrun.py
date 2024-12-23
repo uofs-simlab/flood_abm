@@ -5,7 +5,7 @@ This script runs test scenarios of the flood model to evaluate
 and compare outcomes. 
 
 Output:
-- Data saved in 'data_collection/scenario_results.csv'.
+-Data saved in 'data_collection/scenario_results.csv'.
 """
 
 import sys
