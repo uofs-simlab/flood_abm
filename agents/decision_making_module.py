@@ -291,8 +291,8 @@ def CRT_decide_on_mitigation_and_preparedness(self):
 #PRE-EVENT and DURING-EVENT EVACUATIONS
 
 def PMT_decide_on_evacuation(self):
-    immediate_threat = self.severity * 1.2  # could this be based on the predicted flood levels
-    utility_of_evacuation = immediate_threat - (self.costs * 1.1) # could this be based on the predicted flood levels
+    immediate_threat = self.severity * 1.2  
+    utility_of_evacuation = immediate_threat - (self.costs * 1.1) 
 
     if utility_of_evacuation > random.gauss(utility_of_evacuation, utility_of_evacuation):
         self.evacuated = True

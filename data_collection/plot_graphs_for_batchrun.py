@@ -85,7 +85,7 @@ file_path = "batchrun_results.csv"
 output_dir = "./graphs"  # Graphs will be saved here
 
 columns_to_include = [
-    ["Step", "Evacuated", "Preflood_Non_Evacuation_Measure_Implemented", "Duringflood_Coping_Action_Implemented", "Postflood_Adaptation_Measures_Planned"],
+    ["Step", "Preflood_Non_Evacuation_Measure_Implemented", "Evacuated", "Duringflood_Coping_Action_Implemented", "Postflood_Adaptation_Measures_Planned"],
     ["Step", "Stranded", "Injured", "Sheltered", "Hospitalized", "Death"],
     ["Step", "evacuated_SES_1_0_0.3", "evacuated_SES_1_0.7_1"],
     ["Step", "evacuated_SES_2_0_0.3", "evacuated_SES_2_0.7_1"],
@@ -130,7 +130,7 @@ line 119 to 134
 group_num = 0
 x_label = "Days"
 y_label = "Pecentage of Population"
-legend_labels = ["Evacuations", "Preflood Non-Evacuation Measures", "Duringflood Coping Actions", "Postflood Adaptation Measures"]
+legend_labels = ["Preflood Non-Evacuation Measures","Evacuations",  "Duringflood Coping Actions", "Postflood Adaptation Measures"]
 legend_fontsize = '18'
 line_thickness = 4
 x_range = (0, 38)
@@ -153,7 +153,7 @@ plot_graphs(file_path, output_dir, group_num, columns_to_include, x_label, y_lab
 group_num = 1
 x_label = "Days"
 y_label = "Pecentage of Population"
-legend_labels = ["Stranded", "Injured", "Sheltered", "Hospitalized", "Death"]
+legend_labels = ["Stranded", "Health-Compromised", "Sheltered", "Hospitalized", "Death"]
 legend_fontsize = '22'
 line_thickness = 4
 x_range = (0, 38)
@@ -366,7 +366,7 @@ plot_graphs(file_path, output_dir, group_num, columns_to_include, x_label, y_lab
 #SES1
 group_num = 17
 x_label = "Days"
-y_label = "Proportion of theories in high vulnerability group"
+y_label = "Proportion of highly vulnerable agents"
 legend_labels = ["PMT",	"TPB", "SCT", "CRT"]
 legend_fontsize = '22'
 line_thickness = 4
@@ -390,7 +390,7 @@ plot_graphs(file_path, output_dir, group_num, columns_to_include, x_label, y_lab
 #SES1
 group_num = 16
 x_label = "Days"
-y_label = "Proportion of theories in low vulnerability group"
+y_label = "Proportion of low vulnerability agents"
 legend_labels = ["PMT",	"TPB", "SCT", "CRT"]
 legend_fontsize = '22'
 line_thickness = 4
@@ -414,7 +414,7 @@ plot_graphs(file_path, output_dir, group_num, columns_to_include, x_label, y_lab
 #SES1
 group_num = 20                       # Select the group number from columns_to_include
 x_label = "Days"
-y_label = "Proportion of theories in low vulnerability group"
+y_label = "Proportion of low vulnerability agents"
 legend_labels = ["PMT",	"TPB", "SCT", "CRT"]
 legend_fontsize = '22'
 line_thickness = 4
@@ -438,7 +438,7 @@ plot_graphs(file_path, output_dir, group_num, columns_to_include, x_label, y_lab
 #SES1
 group_num = 21                       # Select the group number from columns_to_include
 x_label = "Days"
-y_label = "Proportion of theories in high vulnerability group"
+y_label = "Proportion of highly vulnerable agents"
 legend_labels = ["PMT",	"TPB", "SCT", "CRT"]
 legend_fontsize = '22'
 line_thickness = 4
@@ -462,7 +462,7 @@ plot_graphs(file_path, output_dir, group_num, columns_to_include, x_label, y_lab
 #SES1
 group_num = 24                       # Select the group number from columns_to_include
 x_label = "Days"
-y_label = "Proportion of theories in low vulnerability group"
+y_label = "Proportion of low vulnerability agents"
 legend_labels = ["PMT",	"TPB", "SCT", "CRT"]
 legend_fontsize = '22'
 line_thickness = 4
@@ -486,7 +486,7 @@ plot_graphs(file_path, output_dir, group_num, columns_to_include, x_label, y_lab
 #SES1
 group_num = 25                       # Select the group number from columns_to_include
 x_label = "Days"
-y_label = "Proportion of theories in high vulnerability group"
+y_label = "Proportion of highly vulnerable agents"
 legend_labels = ["PMT",	"TPB", "SCT", "CRT"]
 legend_fontsize = '22'
 line_thickness = 4
@@ -510,7 +510,7 @@ plot_graphs(file_path, output_dir, group_num, columns_to_include, x_label, y_lab
 #SES1
 group_num = 28                       # Select the group number from columns_to_include
 x_label = "Days"
-y_label = "Proportion of theories in low vulnerability group"
+y_label = "Proportion of low vulnerability agents"
 legend_labels = ["PMT",	"TPB", "SCT", "CRT"]
 legend_fontsize = '22'
 line_thickness = 4
@@ -534,7 +534,7 @@ plot_graphs(file_path, output_dir, group_num, columns_to_include, x_label, y_lab
 #SES1
 group_num = 29                       # Select the group number from columns_to_include
 x_label = "Days"
-y_label = "Proportion of theories in high vulnerability group"
+y_label = "Proportion of highly vulnerable agents"
 legend_labels = ["PMT",	"TPB", "SCT", "CRT"]
 legend_fontsize = '22'
 line_thickness = 4
