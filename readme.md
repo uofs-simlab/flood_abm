@@ -1,6 +1,6 @@
-# Flood Effects on Vulnerable Groups and Decision-Making Processes
+# Flood-ABM: An agent-based model of differential flood effects on population groups and their decision-making processes
 
-This repository contains an **Agent-Based Model (ABM)** that simulates the effects of flooding on vulnerable groups, their decision-making processes, and community-level responses. Using **Mesa** for agent-based modeling and **Mesa-Geo** for GIS integration, the model captures interactions between individuals, households, businesses, shelters, healthcare systems, and government entities under pre-flood, flood, and post-flood conditions. The ABM evaluates vulnerability, resilience, and decisions made during disasters based on socio-economic factors, demographics, and spatial characteristics.
+This repository contains an **Agent-Based Model (ABM)** that simulates the effects of flooding on population groups, their decision-making processes, and community-level responses. Using **Mesa** for agent-based modeling and **Mesa-Geo** for GIS integration, the model captures interactions between individuals, households, businesses, shelters, healthcare systems, and government entities under pre-flood, flood, and post-flood conditions. The ABM evaluates vulnerability, resilience, and decisions made during disasters based on socio-economic factors, demographics, and spatial characteristics.
 
 ---
 
@@ -94,7 +94,7 @@ pip install -r requirements.txt
 
 1. **Mesa**: [Mesa Documentation](https://mesa.readthedocs.io/)
 2. **Mesa-Geo**: [Mesa-Geo Documentation](https://mesa-geo.readthedocs.io/)
-3. **Literature**: *(Pending Submission)* – Title: "Flood Effects on Vulnerable Groups and Decision-Making Processes" *(to be updated upon publication)*.
+3. **Literature**: *(Pending Submission)* – Title: "Flood-ABM: An agent-based model of differential flood effects on population groups and their decision-making processes" *(to be updated upon publication)*.
 
 ---
 
