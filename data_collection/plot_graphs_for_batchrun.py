@@ -129,8 +129,8 @@ line 119 to 134
 
 group_num = 0
 x_label = "Days"
-y_label = "Pecentage of Population"
-legend_labels = ["Preflood Non-Evacuation Measures","Evacuations",  "Duringflood Coping Actions", "Postflood Adaptation Measures"]
+y_label = "Pecentage of population"
+legend_labels = ["Pre-flood non-evacuation measures","Evacuations",  "During-flood coping actions", "Post-flood adaptation measures"]
 legend_fontsize = '18'
 line_thickness = 4
 x_range = (0, 38)
@@ -141,7 +141,7 @@ axis_label_size = 22
 tick_label_size = 18  # Set the tick label size here
 colors = sns.color_palette("deep")  # Seaborn’s default color palette
 plt_std = True
-plot_title = "Preflood non-evacuation measure implemention"
+plot_title = "."
 show_title = False
 save_filename = "all_phases"  # Filename for the saved graph
 # To plot the average with standard deviation fill
@@ -152,8 +152,8 @@ plot_graphs(file_path, output_dir, group_num, columns_to_include, x_label, y_lab
 
 group_num = 1
 x_label = "Days"
-y_label = "Pecentage of Population"
-legend_labels = ["Stranded", "Health-Compromised", "Sheltered", "Hospitalized", "Death"]
+y_label = "Pecentage of population"
+legend_labels = ["Stranded", "Health-compromised", "Sheltered", "Hospitalized", "Deceased"]
 legend_fontsize = '22'
 line_thickness = 4
 x_range = (0, 38)
@@ -164,7 +164,7 @@ axis_label_size = 22
 tick_label_size = 18  # Set the tick label size here
 colors = sns.color_palette("deep")  # Seaborn’s default color palette
 plt_std = True
-plot_title = "Preflood non-evacuation measure implemention"
+plot_title = "."
 show_title = False
 save_filename = "persons_effects"  # Filename for the saved graph
 # To plot the average with standard deviation fill
@@ -175,7 +175,7 @@ plot_graphs(file_path, output_dir, group_num, columns_to_include, x_label, y_lab
 
 group_num = 14
 x_label = "Days"
-y_label = "Proportion of Flooded Structures"
+y_label = "Proportion of flooded structures"
 legend_labels = ["Homes", "Businesses", "Schools"]
 legend_fontsize = '22'
 line_thickness = 4
@@ -187,7 +187,7 @@ axis_label_size = 22
 tick_label_size = 18  # Set the tick label size here
 colors = sns.color_palette("deep")  # Seaborn’s default color palette
 plt_std = True
-plot_title = "Preflood non-evacuation measure implemention"
+plot_title = "."
 show_title = False
 save_filename = "entity_effects"  # Filename for the saved graph
 # To plot the average with standard deviation fill
@@ -198,8 +198,8 @@ plot_graphs(file_path, output_dir, group_num, columns_to_include, x_label, y_lab
 
 group_num = 15
 x_label = "Days"
-y_label = "Relative Wealth Growth"
-legend_labels = ["People", "Businesses", "Shelter", "Healthcare", "Government"]
+y_label = "Relative wealth growth"
+legend_labels = ["Persons", "Businesses", "Shelter", "Healthcare", "Government"]
 legend_fontsize = '17'
 line_thickness = 4
 x_range = (0, 38)
@@ -210,7 +210,7 @@ axis_label_size = 22
 tick_label_size = 18  # Set the tick label size here
 colors = sns.color_palette("deep")  # Seaborn’s default color palette
 plt_std = True
-plot_title = "Preflood non-evacuation measure implemention"
+plot_title = "."
 show_title = False
 save_filename = "wealth_effects"  # Filename for the saved graph
 # To plot the average with standard deviation fill
@@ -223,7 +223,7 @@ plot_graphs(file_path, output_dir, group_num, columns_to_include, x_label, y_lab
 group_num = 2
 x_label = "Days"
 y_label = "Evacuated persons proportions"
-legend_labels = ["Low-vulnerability", "High-vulnerability"]
+legend_labels = ["Low SES (high-vunerability)", "High SES (low-vulnerability)"]
 legend_fontsize = '22'
 line_thickness = 4
 x_range = (0, 38)
@@ -234,7 +234,7 @@ axis_label_size = 22
 tick_label_size = 18  # Set the tick label size here
 colors = sns.color_palette("deep")  # Seaborn’s default color palette
 plt_std = False
-plot_title = "Preflood non-evacuation measure implemention"
+plot_title = "."
 show_title = False
 save_filename = "evacuation_vul"  # Filename for the saved graph
 # To plot the average with standard deviation fill
@@ -247,7 +247,7 @@ plot_graphs(file_path, output_dir, group_num, columns_to_include, x_label, y_lab
 group_num = 4
 x_label = "Days"
 y_label = "Stranded persons proportions"
-legend_labels = ["Low-vulnerability", "High-vulnerability"]
+legend_labels = ["Low SES (high-vunerability)", "High SES (low-vulnerability)"]
 legend_fontsize = '22'
 line_thickness = 4
 x_range = (0, 38)
@@ -258,7 +258,7 @@ axis_label_size = 22
 tick_label_size = 18  # Set the tick label size here
 colors = sns.color_palette("deep")  # Seaborn’s default color palette
 plt_std = False
-plot_title = "Preflood non-evacuation measure implemention"
+plot_title = "."
 show_title = False
 save_filename = "stranded_vul"  # Filename for the saved graph
 # To plot the average with standard deviation fill
@@ -270,19 +270,19 @@ plot_graphs(file_path, output_dir, group_num, columns_to_include, x_label, y_lab
 #SES1
 group_num = 6
 x_label = "Days"
-y_label = "Injured persons proportions"
-legend_labels = ["Low-vulnerability", "High-vulnerability"]
+y_label = "Health-compromised persons proportions"
+legend_labels = ["Low SES (high-vunerability)", "High SES (low-vulnerability)"]
 legend_fontsize = '22'
 line_thickness = 4
 x_range = (0, 38)
 y_range = (0, 0.5)
 x_interval = 7
 y_interval = 0.1
-axis_label_size = 22
+axis_label_size = 20
 tick_label_size = 18  # Set the tick label size here
 colors = sns.color_palette("deep")  # Seaborn’s default color palette
 plt_std = False
-plot_title = "Preflood non-evacuation measure implemention"
+plot_title = "."
 show_title = False
 save_filename = "injured_vul"  # Filename for the saved graph
 # To plot the average with standard deviation fill
@@ -295,7 +295,7 @@ plot_graphs(file_path, output_dir, group_num, columns_to_include, x_label, y_lab
 group_num = 8
 x_label = "Days"
 y_label = "Hospitalized persons proportions"
-legend_labels = ["Low-vulnerability", "High-vulnerability"]
+legend_labels = ["Low SES (high-vunerability)", "High SES (low-vulnerability)"]
 legend_fontsize = '22'
 line_thickness = 4
 x_range = (0, 38)
@@ -306,7 +306,7 @@ axis_label_size = 22
 tick_label_size = 18  # Set the tick label size here
 colors = sns.color_palette("deep")  # Seaborn’s default color palette
 plt_std = False
-plot_title = "Preflood non-evacuation measure implemention"
+plot_title = "."
 show_title = False
 save_filename = "hospitalized_vul"  # Filename for the saved graph
 # To plot the average with standard deviation fill
@@ -319,7 +319,7 @@ plot_graphs(file_path, output_dir, group_num, columns_to_include, x_label, y_lab
 group_num = 10
 x_label = "Days"
 y_label = "Sheltered persons proportions"
-legend_labels = ["Low-vulnerability", "High-vulnerability"]
+legend_labels = ["Low SES (high-vunerability)", "High SES (low-vulnerability)"]
 legend_fontsize = '22'
 line_thickness = 4
 x_range = (0, 38)
@@ -330,7 +330,7 @@ axis_label_size = 22
 tick_label_size = 18  # Set the tick label size here
 colors = sns.color_palette("deep")  # Seaborn’s default color palette
 plt_std = False
-plot_title = "Preflood non-evacuation measure implemention"
+plot_title = "."
 show_title = False
 save_filename = "sheltered_vul"  # Filename for the saved graph
 # To plot the average with standard deviation fill
@@ -343,7 +343,7 @@ plot_graphs(file_path, output_dir, group_num, columns_to_include, x_label, y_lab
 group_num = 12
 x_label = "Days"
 y_label = "Deceased persons proportions"
-legend_labels = ["Low-vulnerability", "High-vulnerability"]
+legend_labels = ["Low SES (high-vunerability)", "High SES (low-vulnerability)"]
 legend_fontsize = '22'
 line_thickness = 4
 x_range = (0, 38)
@@ -354,7 +354,7 @@ axis_label_size = 22
 tick_label_size = 18  # Set the tick label size here
 colors = sns.color_palette("deep")  # Seaborn’s default color palette
 plt_std = False
-plot_title = "Preflood non-evacuation measure implemention"
+plot_title = "."
 show_title = False
 save_filename = "deceased_vul"  # Filename for the saved graph
 # To plot the average with standard deviation fill
@@ -366,7 +366,7 @@ plot_graphs(file_path, output_dir, group_num, columns_to_include, x_label, y_lab
 #SES1
 group_num = 17
 x_label = "Days"
-y_label = "Proportion of highly vulnerable agents"
+y_label = "Proportion of high-vulnerability agents"
 legend_labels = ["PMT",	"TPB", "SCT", "CRT"]
 legend_fontsize = '22'
 line_thickness = 4
@@ -374,12 +374,12 @@ x_range = (7, 14.1)
 y_range = (0, 0.2)
 x_interval = 7
 y_interval = 0.05
-axis_label_size = 17
-tick_label_size = 18  # Set the tick label size here
+axis_label_size = 22
+tick_label_size = 22  # Set the tick label size here
 colors = sns.color_palette("deep")  # Seaborn’s default color palette
 plt_std = False
-plot_title = "Preflood non-evacuation measure implemention"
-show_title = True
+plot_title = "."
+show_title = False
 save_filename = "nonevac_high_dec"  # Filename for the saved graph
 # To plot the average with standard deviation fill
 plot_graphs(file_path, output_dir, group_num, columns_to_include, x_label, y_label, legend_labels, legend_fontsize, 
@@ -390,7 +390,7 @@ plot_graphs(file_path, output_dir, group_num, columns_to_include, x_label, y_lab
 #SES1
 group_num = 16
 x_label = "Days"
-y_label = "Proportion of low vulnerability agents"
+y_label = "Proportion of low-vulnerability agents"
 legend_labels = ["PMT",	"TPB", "SCT", "CRT"]
 legend_fontsize = '22'
 line_thickness = 4
@@ -398,12 +398,12 @@ x_range = (7, 14.1)
 y_range = (0, 0.04)
 x_interval = 7
 y_interval = 0.025
-axis_label_size = 17
-tick_label_size = 18  # Set the tick label size here
+axis_label_size = 22
+tick_label_size = 22  # Set the tick label size here
 colors = sns.color_palette("deep")  # Seaborn’s default color palette
 plt_std = False
-plot_title = "Preflood non-evacuation measure implemention"
-show_title = True
+plot_title = "."
+show_title = False
 save_filename = "nonevac_low_dec"  # Filename for the saved graph
 # To plot the average with standard deviation fill
 plot_graphs(file_path, output_dir, group_num, columns_to_include, x_label, y_label, legend_labels, legend_fontsize, 
@@ -414,7 +414,7 @@ plot_graphs(file_path, output_dir, group_num, columns_to_include, x_label, y_lab
 #SES1
 group_num = 20                       # Select the group number from columns_to_include
 x_label = "Days"
-y_label = "Proportion of low vulnerability agents"
+y_label = "Proportion of low-vulnerability agents"
 legend_labels = ["PMT",	"TPB", "SCT", "CRT"]
 legend_fontsize = '22'
 line_thickness = 4
@@ -422,12 +422,12 @@ x_range = (7, 24.1)
 y_range = (0, 0.21)
 x_interval = 7
 y_interval = 0.07
-axis_label_size = 17
-tick_label_size = 18  # Set the tick label size here
+axis_label_size = 22
+tick_label_size = 22  # Set the tick label size here
 colors = sns.color_palette("deep")  # Seaborn’s default color palette
 plt_std = False
-plot_title = "Pre-flood and during-flood evacuations"
-show_title = True
+plot_title = "."
+show_title = False
 save_filename = "evac_low_dec"  # Filename for the saved graph
 # To plot the average with standard deviation fill
 plot_graphs(file_path, output_dir, group_num, columns_to_include, x_label, y_label, legend_labels, legend_fontsize, 
@@ -438,7 +438,7 @@ plot_graphs(file_path, output_dir, group_num, columns_to_include, x_label, y_lab
 #SES1
 group_num = 21                       # Select the group number from columns_to_include
 x_label = "Days"
-y_label = "Proportion of highly vulnerable agents"
+y_label = "Proportion of high-vulnerability agents"
 legend_labels = ["PMT",	"TPB", "SCT", "CRT"]
 legend_fontsize = '22'
 line_thickness = 4
@@ -446,12 +446,12 @@ x_range = (7, 24.1)
 y_range = (0, 0.21)
 x_interval = 7
 y_interval = 0.07
-axis_label_size = 17
-tick_label_size = 18  # Set the tick label size here
+axis_label_size = 22
+tick_label_size = 22  # Set the tick label size here
 colors = sns.color_palette("deep")  # Seaborn’s default color palette
 plt_std = False
-plot_title = "Pre-flood and during-flood evacuations"
-show_title = True
+plot_title = "."
+show_title = False
 save_filename = "evac_high_dec"  # Filename for the saved graph
 # To plot the average with standard deviation fill
 plot_graphs(file_path, output_dir, group_num, columns_to_include, x_label, y_label, legend_labels, legend_fontsize, 
@@ -462,7 +462,7 @@ plot_graphs(file_path, output_dir, group_num, columns_to_include, x_label, y_lab
 #SES1
 group_num = 24                       # Select the group number from columns_to_include
 x_label = "Days"
-y_label = "Proportion of low vulnerability agents"
+y_label = "Proportion of low-vulnerability agents"
 legend_labels = ["PMT",	"TPB", "SCT", "CRT"]
 legend_fontsize = '22'
 line_thickness = 4
@@ -470,12 +470,12 @@ x_range = (14, 24.1)
 y_range = (0, 0.04)
 x_interval = 7
 y_interval = 0.01
-axis_label_size = 17
-tick_label_size = 18  # Set the tick label size here
+axis_label_size = 22
+tick_label_size = 22  # Set the tick label size here
 colors = sns.color_palette("deep")  # Seaborn’s default color palette
 plt_std = False
-plot_title = "During-flood coping action implemented"
-show_title = True
+plot_title = "."
+show_title = False
 save_filename = "during_low_dec"  # Filename for the saved graph
 # To plot the average with standard deviation fill
 plot_graphs(file_path, output_dir, group_num, columns_to_include, x_label, y_label, legend_labels, legend_fontsize, 
@@ -486,7 +486,7 @@ plot_graphs(file_path, output_dir, group_num, columns_to_include, x_label, y_lab
 #SES1
 group_num = 25                       # Select the group number from columns_to_include
 x_label = "Days"
-y_label = "Proportion of highly vulnerable agents"
+y_label = "Proportion of high-vulnerability agents"
 legend_labels = ["PMT",	"TPB", "SCT", "CRT"]
 legend_fontsize = '22'
 line_thickness = 4
@@ -494,12 +494,12 @@ x_range = (14, 24.1)
 y_range = (0, 0.08)
 x_interval = 7
 y_interval = 0.02
-axis_label_size = 17
-tick_label_size = 18  # Set the tick label size here
+axis_label_size = 22
+tick_label_size = 22  # Set the tick label size here
 colors = sns.color_palette("deep")  # Seaborn’s default color palette
 plt_std = False
-plot_title = "During-flood coping action implemented"
-show_title = True
+plot_title = "."
+show_title = False
 save_filename = "during_High_dec"  # Filename for the saved graph
 # To plot the average with standard deviation fill
 plot_graphs(file_path, output_dir, group_num, columns_to_include, x_label, y_label, legend_labels, legend_fontsize, 
@@ -510,7 +510,7 @@ plot_graphs(file_path, output_dir, group_num, columns_to_include, x_label, y_lab
 #SES1
 group_num = 28                       # Select the group number from columns_to_include
 x_label = "Days"
-y_label = "Proportion of low vulnerability agents"
+y_label = "Proportion of low-vulnerability agents"
 legend_labels = ["PMT",	"TPB", "SCT", "CRT"]
 legend_fontsize = '22'
 line_thickness = 4
@@ -518,12 +518,12 @@ x_range = (24, 38.2)
 y_range = (0, 0.05)
 x_interval = 7
 y_interval = 0.01
-axis_label_size = 17
-tick_label_size = 18  # Set the tick label size here
+axis_label_size = 22
+tick_label_size = 22  # Set the tick label size here
 colors = sns.color_palette("deep")  # Seaborn’s default color palette
 plt_std = False
-plot_title = "Post-flood adaptation measures planned"
-show_title = True
+plot_title = "."
+show_title = False
 save_filename = "post_low_dec"  # Filename for the saved graph
 # To plot the average with standard deviation fill
 plot_graphs(file_path, output_dir, group_num, columns_to_include, x_label, y_label, legend_labels, legend_fontsize, 
@@ -534,7 +534,7 @@ plot_graphs(file_path, output_dir, group_num, columns_to_include, x_label, y_lab
 #SES1
 group_num = 29                       # Select the group number from columns_to_include
 x_label = "Days"
-y_label = "Proportion of highly vulnerable agents"
+y_label = "Proportion of high-vulnerability agents"
 legend_labels = ["PMT",	"TPB", "SCT", "CRT"]
 legend_fontsize = '22'
 line_thickness = 4
@@ -542,12 +542,12 @@ x_range = (24, 38.2)
 y_range = (0, 0.15)
 x_interval = 7
 y_interval = 0.05
-axis_label_size = 17
-tick_label_size = 18  # Set the tick label size here
+axis_label_size = 22
+tick_label_size = 22  # Set the tick label size here
 colors = sns.color_palette("deep")  # Seaborn’s default color palette
 plt_std = False
-plot_title = "Post-flood adaptation measures planned"
-show_title = True
+plot_title = "."
+show_title = False
 save_filename = "post_High_dec"  # Filename for the saved graph
 # To plot the average with standard deviation fill
 plot_graphs(file_path, output_dir, group_num, columns_to_include, x_label, y_label, legend_labels, legend_fontsize, 

@@ -143,8 +143,8 @@ y_interval = 0.002
 axis_label_size = 22
 tick_label_size = 22
 colors = sns.color_palette("deep")
-plot_title = "Hospitalized persons(high-vulnerability) vs shelter capacity"
-show_title = True
+plot_title = "Hospitalized persons (high-vulnerability) vs shelter capacity"
+show_title = False
 show_legend = False  # Change to True to show legend
 save_filename = "hospitalized_shelcap"
 
@@ -168,8 +168,8 @@ y_interval = 0.005
 axis_label_size = 22
 tick_label_size = 22
 colors = sns.color_palette("deep")
-plot_title = "Injured persons(high-vulnerability) vs shelter capacity"
-show_title = True
+plot_title = "Health-compromised (high-vulnerability) vs shelter capacity"
+show_title = False
 show_legend = False  # Change to True to show legend
 save_filename = "injured_shelcap"
 
@@ -191,8 +191,8 @@ y_interval = 0.004
 axis_label_size = 22
 tick_label_size = 22
 colors = sns.color_palette("deep")
-plot_title = "Sheltered persons(high-vulnerability) vs shelter capacity"
-show_title = True
+plot_title = "Sheltered persons (high-vulnerability) vs shelter capacity"
+show_title = False
 show_legend = False  # Change to True to show legend
 save_filename = "sheltered_shelcap"
 
@@ -214,8 +214,8 @@ y_interval = 0.005
 axis_label_size = 22
 tick_label_size = 22
 colors = sns.color_palette("deep")
-plot_title = "Stranded persons(high-vulnerability) vs shelter capacity"
-show_title = True
+plot_title = "Stranded persons (high-vulnerability) vs shelter capacity"
+show_title = False
 show_legend = False  # Change to True to show legend
 save_filename = "stranded_shelcap"
 
