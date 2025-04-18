@@ -90,14 +90,15 @@ class colorLegend(TextElement):
         legend += "<strong>Legend:</strong><br>"
         legend += "<span style='color: green;'>&#9679; Green: Person<br>"
         legend += "<span style='color: red;'>&#9679; Red: Stranded Person<br>"
-        legend += "<span style='color: orange;'>&#9679; Orange: Injured Person<br>"
+        legend += "<span style='color: orange;'>&#9679; Orange: Health-compromised<br>"
         legend += "<span style='color: black;'>&#9679; Deceased Person<br>"
         legend += "<span style='color: purple;'>&#9679; Purple: Business<br>"
         legend += "<span style='color: grey;'>&#9679; Yellow: School<br>"
         legend += "<span style='color: brown;'>&#9679; Brown: House<br>"
         legend += "<span style='color: magenta;'>&#9679; Magenta: Government<br>"
         legend += "<span style='color: blue;'>&#9679; Blue: Shelter<br>"
-        legend += "<span style='color: cyan;'>&#9679; Cyan: Healthcare<br>"
+        legend += "<span style='color: orange;'>&#9679; Orange: Healthcare<br>"
+        legend += "<span style='color: cyan;'>&#9679; Cyan: Flood Inundation<br>"
         legend += "</div>"      
         return legend
 
@@ -185,7 +186,7 @@ dead_chart_ses_2 = create_grouped_ses_charts("dead", ses_index_2_ranges, ses_ind
 # General charts (not SES-specific)
 persons_chart = ChartModule([
     {"Label": "Stranded", "Color": "red"},
-    {"Label": "Injured", "Color": "orange"},
+    {"Label": "Health-compromised", "Color": "orange"},
     {"Label": "Sheltered", "Color": "blue"},
     {"Label": "Hospitalized", "Color": "grey"},
     {"Label": "Death", "Color": "black"}
