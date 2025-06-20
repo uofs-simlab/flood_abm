@@ -223,7 +223,7 @@ plot_graphs(file_path, output_dir, group_num, columns_to_include, x_label, y_lab
 group_num = 2
 x_label = "Days"
 y_label = "Evacuated persons proportions"
-legend_labels = ["Low SES (high-vunerability)", "High SES (low-vulnerability)"]
+legend_labels = ["High SES (low-vunerability)", "Low SES (high-vulnerability)"]
 legend_fontsize = '22'
 line_thickness = 4
 x_range = (0, 38)
@@ -247,7 +247,7 @@ plot_graphs(file_path, output_dir, group_num, columns_to_include, x_label, y_lab
 group_num = 4
 x_label = "Days"
 y_label = "Stranded persons proportions"
-legend_labels = ["Low SES (high-vunerability)", "High SES (low-vulnerability)"]
+legend_labels = ["High SES (low-vunerability)", "Low SES (high-vulnerability)"]
 legend_fontsize = '22'
 line_thickness = 4
 x_range = (0, 38)
@@ -271,7 +271,7 @@ plot_graphs(file_path, output_dir, group_num, columns_to_include, x_label, y_lab
 group_num = 6
 x_label = "Days"
 y_label = "Health-compromised persons proportions"
-legend_labels = ["Low SES (high-vunerability)", "High SES (low-vulnerability)"]
+legend_labels = ["High SES (low-vunerability)", "Low SES (high-vulnerability)"]
 legend_fontsize = '22'
 line_thickness = 4
 x_range = (0, 38)
@@ -295,7 +295,7 @@ plot_graphs(file_path, output_dir, group_num, columns_to_include, x_label, y_lab
 group_num = 8
 x_label = "Days"
 y_label = "Hospitalized persons proportions"
-legend_labels = ["Low SES (high-vunerability)", "High SES (low-vulnerability)"]
+legend_labels = ["High SES (low-vunerability)", "Low SES (high-vulnerability)"]
 legend_fontsize = '22'
 line_thickness = 4
 x_range = (0, 38)
@@ -319,7 +319,7 @@ plot_graphs(file_path, output_dir, group_num, columns_to_include, x_label, y_lab
 group_num = 10
 x_label = "Days"
 y_label = "Sheltered persons proportions"
-legend_labels = ["Low SES (high-vunerability)", "High SES (low-vulnerability)"]
+legend_labels = ["High SES (low-vunerability)", "Low SES (High-vulnerability)"]
 legend_fontsize = '22'
 line_thickness = 4
 x_range = (0, 38)
@@ -343,7 +343,7 @@ plot_graphs(file_path, output_dir, group_num, columns_to_include, x_label, y_lab
 group_num = 12
 x_label = "Days"
 y_label = "Deceased persons proportions"
-legend_labels = ["Low SES (high-vunerability)", "High SES (low-vulnerability)"]
+legend_labels = ["High SES (low-vunerability)", "Low SES (High-vulnerability)"]
 legend_fontsize = '22'
 line_thickness = 4
 x_range = (0, 38)
