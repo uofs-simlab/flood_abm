@@ -132,7 +132,7 @@ output_dir = "./graphs"  # Graphs will be saved here
 # hospitalized
 metric = "avg_max_hospitalized_total_pop_SES_1_0.7_1"  # Specify the metric you want to plot
 x_label = "Shelter capacity limit"
-y_label = "Population proportions"
+y_label = "Population proportion"
 legend_labels = ["Stranded SES 1"]
 legend_fontsize = 22
 line_thickness = 4
@@ -157,7 +157,7 @@ plot_graphs(file_path, metric, x_label, y_label, legend_labels, legend_fontsize,
 # Injured
 metric = "avg_max_injured_total_pop_SES_1_0.7_1"  # Specify the metric you want to plot
 x_label = "Shelter capacity limit"
-y_label = "Population proportions"
+y_label = "Population proportion"
 legend_labels = ["Stranded SES 1"]
 legend_fontsize = 22
 line_thickness = 4
@@ -180,7 +180,7 @@ plot_graphs(file_path, metric, x_label, y_label, legend_labels, legend_fontsize,
 # Sheltered
 metric = "avg_max_sheltered_total_pop_SES_1_0.7_1"  # Specify the metric you want to plot
 x_label = "Shelter capacity limit"
-y_label = "Population proportions"
+y_label = "Population proportion"
 legend_labels = ["Stranded SES 1"]
 legend_fontsize = 22
 line_thickness = 4
@@ -203,7 +203,7 @@ plot_graphs(file_path, metric, x_label, y_label, legend_labels, legend_fontsize,
 # stranded
 metric = "avg_max_stranded_total_pop_SES_1_0.7_1"  # Specify the metric you want to plot
 x_label = "Shelter capacity limit"
-y_label = "Population proportions"
+y_label = "Population proportion"
 legend_labels = ["Stranded SES 1"]
 legend_fontsize = 22
 line_thickness = 4

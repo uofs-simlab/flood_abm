@@ -94,7 +94,7 @@ pip install -r requirements.txt
 
 1. **Mesa**: [Mesa Documentation](https://mesa.readthedocs.io/)
 2. **Mesa-Geo**: [Mesa-Geo Documentation](https://mesa-geo.readthedocs.io/)
-3. **Literature**: *(Pending Acceptance)* – Title: "Flood-ABM: An agent-based model of differential flood effects on population groups and their decision-making processes" *(to be updated upon publication)*.
+3. **Literature**: Title: [Flood-ABM: An agent-based model of differential flood effects on population groups and their decision-making processes](https://doi.org/10.1016/j.ijdrr.2025.105698)
 
 ---
 
